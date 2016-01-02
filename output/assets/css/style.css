@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+}
+
+#base {
+  width: 640px;
+  margin: 0 auto;
+  padding-top: 60px;
+  position: center;
+}
+
+#board {
+  width: 434px;
+  height: 374px;
+  margin: 0 auto;
+  position: fixed;
+  background: rgb(114, 183, 222);
+}
+
+.disc {
+  position: absolute;
+  z-index: -1;
+  top: -55px;
+  left: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 46px;
+  transition: all .3s;
+}
+
+.disc.red {
+  background: #d96666;
+}
+
+.disc.yellow {
+  background: #ffeb79;
+}
