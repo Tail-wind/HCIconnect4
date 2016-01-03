@@ -1,22 +1,24 @@
 h1 {
   text-align: center;
+  position: relative;
 }
-
 #base {
   width: 640px;
   margin: 0 auto;
   padding-top: 60px;
-  position: center;
+  position: fixed;
+  padding-left: 200px;
+  top: 40px;
+  z-index: 10;
+  float: right;
 }
-
 #board {
   width: 434px;
   height: 374px;
   margin: 0 auto;
   position: fixed;
-  background: rgb(114, 183, 222);
+  background-image: url(../png/Connect4Board.png);
 }
-
 .disc {
   position: absolute;
   z-index: -1;
@@ -27,11 +29,74 @@ h1 {
   border-radius: 46px;
   transition: all .3s;
 }
-
-.disc.red {
-  background: #d96666;
+.disc.blue {
+  background-image: url(../png/BlueToken.png);
 }
-
-.disc.yellow {
-  background: #ffeb79;
+.disc.orange {
+  background-image: url(../png/OrangeToken.png);
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  float: inherit;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 30px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+#menu {
+  position: fixed;
+  width: 200px;
+  float: left;
+}
+#player-colour {
+  text-align: center;
+}
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #f2f2f2;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+#content {
+  position: relative;
+  top: 40px;
+  background-color: #eee;
+  z-index: 10;
+}
+#main {
+  padding: 10px;
+  line-height: 20;
+  /* to fake content with a huge height without much clutter content */
 }

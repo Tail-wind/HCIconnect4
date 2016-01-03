@@ -87,7 +87,7 @@ function decide(){
 
 function Disc(player){
   this.player = player;
-  this.color = player == 1 ? 'red' : 'yellow';
+  this.color = player == 1 ? 'blue' : 'orange';
   this.id = id.toString();
   id++;
 
