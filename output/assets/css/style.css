@@ -1,20 +1,16 @@
 h1 {
   text-align: center;
-  position: fixed;
-  padding-left: 100px;
-  padding-bottom: 150px;
-  width: 640px;
-  height: auto;
+  position: relative;
 }
 #base {
   width: 640px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 60px;
   position: inherit;
   padding-left: 200px;
   top: 40px;
   z-index: 10;
-  float: right;
+  float: inherit;
 }
 #board {
   width: 434px;
