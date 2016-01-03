@@ -3,7 +3,8 @@ board = document.getElementById("board"),
 currentCol,
 currentRow,
 currentPlayer,
-id = 1;
+id = 1,
+won = false;
 
 newgame();
 
@@ -56,6 +57,11 @@ function possibleCol(){
 
 function decide(){
   var possibleMoves = possibleCol();
+  if (possibleMoves.length === 0) {
+    alert('THE Game was a Draw');
+    board.innerHTML = "";
+    newgame();
+  }
   var aiMoves = new Array();
   var blocked;
   var bestBlocked = 0;
@@ -93,7 +99,7 @@ function Disc(player){
 
   this.addToScene = function(){
     board.innerHTML += '<div id="d'+this.id+'" class="disc '+this.color+'"></div>';
-    if(currentPlayer==2){
+    if(currentPlayer==2 && won === false){
       //computer move
       var possibleMoves = decide();
       var cpuMove = Math.floor( Math.random() * possibleMoves.length);
@@ -162,6 +168,7 @@ function checkForMoveVictory(){
     placeDisc(3-currentPlayer);
   } else {
     var winner = currentPlayer == 2 ? 'Computer' : 'Player';
+    won = true;
     placeDisc(3-currentPlayer);
     alert(winner+" win!");
     board.innerHTML = "";
@@ -176,6 +183,7 @@ function placeDisc(player){
 }
 
 function prepareField(){
+  won = false;
   gameField = new Array();
   for(var i=0; i<6; i++){
     gameField[i] = new Array();

@@ -47,7 +47,7 @@ h1 {
 .dropdown {
   position: relative;
   display: inline-block;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .dropdown-content {
   display: none;
@@ -88,15 +88,4 @@ nav {
   width: 100px;
   padding: 10px;
   text-align: center;
-}
-#content {
-  position: relative;
-  top: 40px;
-  background-color: #eee;
-  z-index: 10;
-}
-#main {
-  padding: 10px;
-  line-height: 20;
-  /* to fake content with a huge height without much clutter content */
 }
